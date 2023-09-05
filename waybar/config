@@ -17,7 +17,7 @@
 
     "modules-left": [
         //"custom/rofi",
-        "wlr/workspaces",
+        "hyprland/workspaces",
         //"temperature",
         //"idle_inhibitor",
         //"mpd"
@@ -209,7 +209,7 @@
     },
 
     "clock#date": {
-        "format": "{:%H:%M   %e %b}", // Icon: calendar-alt
+        "format": "{:%H:%M  %e %b}", // Icon: calendar-alt
         //"format": "{:%I:%M %p  %A %b %d}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "today-format": "<b>{}</b>"
@@ -269,8 +269,8 @@
     "pulseaudio": {
         "scroll-step": 3, // %, can be a float
         "format": "{icon} {volume}% {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-bluetooth": "{volume}% {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
 	"ignored-sinks": ["Easy Effects Sink"],
 	"max-volume": 150,
@@ -288,7 +288,7 @@
            // "default": ["", "", ""]
         },
         "on-click": "pavucontrol",
-		"on-click-middle": "pulseaudio-control --node-blacklist 'alsa_output.platform-snd_aloop.0.analog-stereo' next-node",
+		"on-click-middle": "pulseaudio-control --node-blacklist 'easyeffects_sink' next-node",
         "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
     },
 
